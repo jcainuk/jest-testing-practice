@@ -1,19 +1,32 @@
 // require the sum.js file
-const sum = require('./matchers');
+const { sum, truthyOrFalsey } = require('./matchers');
 
-describe('example tests', () => {
-  test('should add 1 + 2 to equal 3', () => {
+// Maths
+describe('Maths tests', () => {
+  it('should add 1 + 2 to equal 3', () => {
     const result = sum(1, 2);
     expect(result).toBe(3);
   });
 
-  // test('object assignment', () => {
+  // it('object assignment', () => {
   //   const obj = {};
   //   expect(obj).toBe({}); THIS FAILS :(
   // }
 
-  test('object assignment', () => {
+  it('object assignment', () => {
     const obj = {};
     expect(obj).toEqual({});// THIS PASSES :)
+  });
+});
+
+// booleans
+describe('boolean tests', () => {
+  it('should say the value false', () => {
+    const result = truthyOrFalsey(0);
+    expect(result).toBeFalsy;
+  });
+  it('should say the value is true', () => {
+    const result = truthyOrFalsey('hello');
+    expect(result).toBeTruthy;
   });
 });
