@@ -21,22 +21,37 @@ describe('Maths tests', () => {
   });
 });
 
-// booleans
-describe('boolean tests', () => {
+// booleans, null and undefined
+describe('boolean, null and undefined tests', () => {
+  // .toBeFalsy
   it('should say the value false', () => {
     const result = truthyOrFalsey(0);
-    expect(result).toBeFalsy;
+    expect(result).toBeFalsy();
   });
+  // .not.toBeTruthy()
   it('should NOT say the value is true', () => {
     const result = truthyOrFalsey(0);
-    expect(result).not.toBeTruthy;
+    expect(result).not.toBeTruthy();
   });
+  // .toBeTruthy()
   it('should say the value is true', () => {
     const result = truthyOrFalsey('hello');
-    expect(result).toBeTruthy;
+    expect(result).toBeTruthy();
   });
+  // .not.toBeFalsy()
   it('should NOT say the value is false', () => {
     const result = truthyOrFalsey('hello');
-    expect(result).not.toBeFalsy;
+    expect(result).not.toBeFalsy();
+  });
+
+  // .toBeNull
+  it('should say if the value is null', () => {
+    const value = null;
+    expect(value).toBeNull();
+  });
+  // .not.toBeNull()
+  it('should say the value is NOT null', () => {
+    const value = 'Mr Smith';
+    expect(value).not.toBeNull();
   });
 });
