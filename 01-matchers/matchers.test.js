@@ -22,6 +22,11 @@ describe('Maths tests', () => {
     const result = sum(1, 2);
     expect(result).toBe(3);
   });
+  // .toBeGreaterThan()
+  it('should be greater than 3', () => {
+    const result = 3 + 10;
+    expect(result).toBeGreaterThan(3);
+  });
 });
 
 // booleans, null and undefined
