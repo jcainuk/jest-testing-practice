@@ -24,9 +24,11 @@ describe('boolean tests', () => {
   it('should say the value false', () => {
     const result = truthyOrFalsey(0);
     expect(result).toBeFalsy;
+    expect(result).not.toBeTruthy;
   });
   it('should say the value is true', () => {
     const result = truthyOrFalsey('hello');
     expect(result).toBeTruthy;
+    expect(result).not.toBeFalsy;
   });
 });
