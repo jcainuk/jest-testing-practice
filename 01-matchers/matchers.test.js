@@ -1,5 +1,5 @@
 // require the sum.js file
-const sum = require('./sum');
+const sum = require('./matchers');
 
 describe('example tests', () => {
   test('should add 1 + 2 to equal 3', () => {
