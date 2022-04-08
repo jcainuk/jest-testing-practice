@@ -1,21 +1,23 @@
 // require the sum.js file
 const { sum, truthyOrFalsey } = require('./matchers');
 
+// reference types (check equality of objects)
+describe('reference variables type assertions', () => {
+  it('should recognize that 2 objects are not the same variable', () => {
+    const obj = {};
+    expect(obj).not.toBe({});
+  });
+  it('should check the equality of 2 objects', () => {
+    const obj = {};
+    expect(obj).toEqual({});
+  });
+});
+
 // Maths
 describe('Maths tests', () => {
   it('should add 1 + 2 to equal 3', () => {
     const result = sum(1, 2);
     expect(result).toBe(3);
-  });
-
-  // it('object assignment', () => {
-  //   const obj = {};
-  //   expect(obj).toBe({}); THIS FAILS :(
-  // }
-
-  it('object assignment', () => {
-    const obj = {};
-    expect(obj).toEqual({});// THIS PASSES :)
   });
 });
 
