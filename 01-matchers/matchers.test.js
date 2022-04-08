@@ -37,6 +37,11 @@ describe('Maths tests', () => {
     const result = 2;
     expect(result).toBeLessThan(3);
   });
+  // .toBeLessThanOrEqual()
+  it('should be less than or equal to 4', () => {
+    const result = 4;
+    expect(result).toBeLessThanOrEqual(4);
+  });
 });
 
 // booleans, null and undefined
