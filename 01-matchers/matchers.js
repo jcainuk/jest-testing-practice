@@ -4,7 +4,8 @@
 const sum = (num1, num2) => num1 + num2;
 
 // Write a function called 'truthyOrFalsey' to evaluate a value as true or false
-const truthyOrFalsey = (value) => ((value === true));
+const truthyOrFalsy = (value) => (Boolean(value));
+console.log(truthyOrFalsy('hello'));
 
 // export the sum.js file
-module.exports = { sum, truthyOrFalsey };
+module.exports = { sum, truthyOrFalsy };
