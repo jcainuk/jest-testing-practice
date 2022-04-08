@@ -42,6 +42,13 @@ describe('Maths tests', () => {
     const result = 4;
     expect(result).toBeLessThanOrEqual(4);
   });
+
+  // floats (decimals)
+  // .toBeCloseTo()
+  it('should be a number close to 0.3', () => {
+    const result = 0.1 + 0.2;
+    expect(result).toBeCloseTo(0.3);
+  });
 });
 
 // booleans, null and undefined
