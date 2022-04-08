@@ -61,4 +61,9 @@ describe('boolean, null and undefined tests', () => {
     const value = undefined;
     expect(value).toBeUndefined();
   });
+  // .toBeDefined()
+  it('should be a defined value', () => {
+    const value = 'hello';
+    expect(value).toBeDefined();
+  });
 });
