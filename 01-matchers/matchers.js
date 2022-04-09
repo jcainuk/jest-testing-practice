@@ -11,5 +11,5 @@ const compileAndroidCode = () => {
   throw new Error('you are using the wrong JDK');
 };
 
-// export the sum.js file
+// export the matchers.js file functions
 module.exports = { sum, truthyOrFalsy, compileAndroidCode };
