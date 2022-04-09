@@ -94,3 +94,12 @@ describe('boolean, null and undefined tests', () => {
     expect(value).toBeDefined();
   });
 });
+
+// STRINGS
+describe('strings', () => {
+  // .not.toMatch()
+  it('there not to be an "I" in team', () => {
+    // you can use regular expressions
+    expect('team').not.toMatch(/I/);
+  });
+});
