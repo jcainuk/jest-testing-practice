@@ -7,5 +7,9 @@ const sum = (num1, num2) => num1 + num2;
 const truthyOrFalsy = (value) => (Boolean(value));
 console.log(truthyOrFalsy('hello'));
 
+const compileAndroidCode = () => {
+  throw new Error('you are using the wrong JDK');
+};
+
 // export the sum.js file
-module.exports = { sum, truthyOrFalsy };
+module.exports = { sum, truthyOrFalsy, compileAndroidCode };

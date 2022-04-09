@@ -1,5 +1,5 @@
 // require the sum.js file
-const { sum, truthyOrFalsy } = require('./matchers');
+const { sum, truthyOrFalsy, compileAndroidCode } = require('./matchers');
 
 // REFERENCE TYPES (check equality of objects)
 describe('reference variables type assertions', () => {
@@ -112,5 +112,20 @@ describe('arrays', () => {
   // .toContain()
   it('should contain milk', () => {
     expect(shoppingList).toContain('milk');
+  });
+});
+
+// Exceptions and throwing errors
+describe('exceptions and errors', () => {
+  // .toThrow
+  it('should throw an exception', () => {
+    /* In the 'expect block you
+    can use:
+    () => functionName()
+    to call the throw function directly
+    */
+    expect(() => compileAndroidCode()).toThrow(Error);
+    // You can also use the text from the error
+    expect(() => compileAndroidCode()).toThrow('you are using the wrong JDK');
   });
 });
