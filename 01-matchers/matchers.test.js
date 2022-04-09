@@ -1,4 +1,4 @@
-// require the sum.js file
+// require functions from the matchers.js file
 const { sum, truthyOrFalsy, compileAndroidCode } = require('./matchers');
 
 // REFERENCE TYPES (check equality of objects)
