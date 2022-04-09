@@ -1,7 +1,7 @@
 // require the sum.js file
 const { sum, truthyOrFalsy } = require('./matchers');
 
-// reference types (check equality of objects)
+// REFERENCE TYPES (check equality of objects)
 describe('reference variables type assertions', () => {
   // . not.toBe()
   it('should recognize that 2 objects are not the same variable', () => {
@@ -15,7 +15,7 @@ describe('reference variables type assertions', () => {
   });
 });
 
-// Maths
+// NUMBERS
 describe('Maths tests', () => {
   // .toBe
   it('should add 1 + 2 to equal 3', () => {
@@ -51,7 +51,7 @@ describe('Maths tests', () => {
   });
 });
 
-// booleans, null and undefined
+// BOOLEANS, null and undefined
 describe('boolean, null and undefined tests', () => {
   // .toBeFalsy
   it('should say the value false', () => {
@@ -101,5 +101,16 @@ describe('strings', () => {
   it('there not to be an "I" in team', () => {
     // you can use regular expressions
     expect('team').not.toMatch(/I/);
+  });
+});
+
+// ARRAYS
+describe('arrays', () => {
+  const shoppingList = [
+    'diapers', 'kleenex', 'trash bags', 'paper towels', 'milk',
+  ];
+  // .toContain()
+  it('should contain milk', () => {
+    expect(shoppingList).toContain('milk');
   });
 });
