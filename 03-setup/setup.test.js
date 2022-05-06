@@ -16,6 +16,12 @@ afterEach(() => {
   animals = ['elephant', 'zebra', 'bear', 'tiger'];
 });
 
+afterAll(() => {
+  // this will run just once before all tests start
+  console.log('AFTER ALL');
+  animals = ['elephant', 'zebra', 'bear', 'tiger'];
+});
+
 describe('animals array', () => {
   it('should add an animal to the end of array', () => {
     animals.push('aligator');
