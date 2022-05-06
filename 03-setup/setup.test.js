@@ -5,4 +5,9 @@ describe('animals array', () => {
     animals.push('aligator');
     expect(animals[animals.length - 1]).toBe('aligator');
   });
+
+  it('should add an animal to the beginning of array', () => {
+    animals.unshift('monkey');
+    expect(animals[0]).toBe('monkey');
+  });
 });
