@@ -1,1 +1,0 @@
-const fetchData = require('./async');
