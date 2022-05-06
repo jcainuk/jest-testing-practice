@@ -1,4 +1,9 @@
-const animals = ['elephant', 'zebra', 'bear', 'tiger'];
+let animals = ['elephant', 'zebra', 'bear', 'tiger'];
+
+beforeEach(() => {
+  console.log('BEFORE EACH');
+  animals = ['elephant', 'zebra', 'bear', 'tiger'];
+});
 
 describe('animals array', () => {
   it('should add an animal to the end of array', () => {
