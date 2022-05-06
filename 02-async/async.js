@@ -9,6 +9,4 @@ const fetchData = async (id) => {
   return results.data;
 };
 
-fetchData(10);
-
 module.exports = fetchData;
