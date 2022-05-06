@@ -37,3 +37,17 @@ describe('animals array', () => {
     expect(animals.length).toBe(4);
   });
 });
+
+/*
+IF YOU WANT TO SKIP PREVIOUS TESTS
+USE:
+
+it.only()
+
+describe('testing something else', () => {
+  it.only('true should be truthy', () => {
+    expect(true).toBeTruthy();
+  });
+});
+
+*/
