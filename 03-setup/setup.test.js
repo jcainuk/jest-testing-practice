@@ -1,24 +1,23 @@
 let animals = ['elephant', 'zebra', 'bear', 'tiger'];
 
 describe('animals array', () => {
+  // this will run just once before all tests start in this describe block
   beforeAll(() => {
-  // this will run just once before all tests start
     console.log('BEFORE ALL');
     animals = ['elephant', 'zebra', 'bear', 'tiger'];
   });
-
+  // run before every test in this describe block
   beforeEach(() => {
     console.log('BEFORE EACH');
     animals = ['elephant', 'zebra', 'bear', 'tiger'];
   });
-
+  // run after every test in this describe block
   afterEach(() => {
     console.log('AFTER EACH');
     animals = ['elephant', 'zebra', 'bear', 'tiger'];
   });
-
+  // this will run just once after all tests in this describe block
   afterAll(() => {
-  // this will run just once before all tests start
     console.log('AFTER ALL');
     animals = ['elephant', 'zebra', 'bear', 'tiger'];
   });
