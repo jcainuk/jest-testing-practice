@@ -10,4 +10,8 @@ describe('animals array', () => {
     animals.unshift('monkey');
     expect(animals[0]).toBe('monkey');
   });
+
+  it('should have initial length of 4', () => {
+    expect(animals.length).toBe(4);
+  });
 });
