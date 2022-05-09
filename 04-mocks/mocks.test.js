@@ -1,3 +1,4 @@
+// Mock a callback function
 const forEach = (items, callback) => {
   for (let i = 0; i < items.length; i++) {
     callback(items[i]);
@@ -22,4 +23,20 @@ it('mock callback', () => {
 
   // value of second item in array after function call
   expect(mockCalledback.mock.results[1].value).toBe(43); // 1 + 42
+});
+
+// mock a return value
+it('mock return', () => {
+  const mock = jest.fn();
+  // you can insert any value you like (true, false, whatever)
+  // you can append .mockReturnValueOnce as many times as you like
+  mock.mockReturnValueOnce(true).mockReturnValueOnce(false).mockReturnValueOnce('hello');
+
+  const results = mock();
+  const results2 = mock();
+  const results3 = mock();
+
+  expect(results).toBe(true);
+  expect(results2).toBe(false);
+  expect(results3).toBe('hello');
 });
