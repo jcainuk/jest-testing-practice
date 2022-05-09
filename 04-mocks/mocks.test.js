@@ -5,6 +5,9 @@ const axios = require('axios');
 const fetchData = async (id) => {
   const results = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
 
+  // (To prove this works in spies later I added a console.log here)
+  console.log(results);
+
   return results.data;
 };
 const forEach = (items, callback) => {
@@ -50,3 +53,15 @@ it('mock return', () => {
 });
 
 // SPIES
+it('mocks axios', async () => {
+  // jest.spyOn takes an object then a method
+  jest.spyOn(axios, 'get').mockReturnValueOnce({
+    data: {
+      id: 1,
+      todo: 'Get 1m Subs',
+    },
+  });
+  const results = await fetchData(1);
+
+  expect(results.todo).toBe('Get 1m Subs');
+});
