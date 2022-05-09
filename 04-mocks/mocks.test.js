@@ -1,4 +1,12 @@
 // Mock a callback function
+
+const axios = require('axios');
+
+const fetchData = async (id) => {
+  const results = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
+
+  return results.data;
+};
 const forEach = (items, callback) => {
   for (let i = 0; i < items.length; i++) {
     callback(items[i]);
@@ -40,3 +48,5 @@ it('mock return', () => {
   expect(results2).toBe(false);
   expect(results3).toBe('hello');
 });
+
+// SPIES
